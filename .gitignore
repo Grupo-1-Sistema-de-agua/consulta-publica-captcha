@@ -1,0 +1,21 @@
+node_modules/
+.next/
+target/
+*.log
+.env
+.env.*
+!.env.example
+
+# Configuracion local del editor
+.vscode/
+
+# Esquema de referencia del sistema de agua (no forma parte del captcha)
+db/
+
+# Archivos generados por los lanzadores locales
+URL-PUBLICA.txt
+
+# Archivos del sistema operativo
+Thumbs.db
+.DS_Store
+
