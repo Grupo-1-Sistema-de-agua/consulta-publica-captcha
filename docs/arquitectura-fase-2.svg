@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 850" role="img" aria-labelledby="titulo descripcion">
+  <title id="titulo">Arquitectura de la solución integrada Fase 2</title>
+  <desc id="descripcion">Diagrama de la solución Fase 2 de la Oficina de Agua. Muestra el monolito heredado en CodeIgniter 4, la base de datos MariaDB, el módulo de consulta pública con CAPTCHA implementado en Next.js y Spring Boot, el túnel opcional de Cloudflare y los módulos de Fase 2 que no están incluidos en este repositorio.</desc>
+
+  <defs>
+    <marker id="flecha" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#0b2a4a"/>
+    </marker>
+    <marker id="flecha-gris" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#8a9bb0"/>
+    </marker>
+  </defs>
+
+  <rect width="1200" height="850" fill="#f4f6f8"/>
+
+  <text x="40" y="42" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="700" fill="#0b2a4a">Arquitectura de la solución integrada - Fase 2</text>
+  <text x="40" y="66" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#5c6b7a">Oficina de Agua Potable - Monolito heredado, base de datos y módulo de consulta pública con CAPTCHA</text>
+
+  <line x1="800" y1="58" x2="850" y2="58" stroke="#0b2a4a" stroke-width="2"/>
+  <text x="860" y="63" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#334e68">Implementado / verificado</text>
+  <line x1="1010" y1="58" x2="1060" y2="58" stroke="#8a9bb0" stroke-width="2" stroke-dasharray="6 4"/>
+  <text x="1070" y="63" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#5c6b7a">Externo o no incluido</text>
+
+  <!-- Monolito heredado -->
+  <rect x="40" y="180" width="310" height="160" rx="8" fill="#ffffff" stroke="#8a9bb0" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="60" y="210" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#8a5a1f">MONOLITO HEREDADO</text>
+  <text x="60" y="236" font-family="Segoe UI, Arial, sans-serif" font-size="16" font-weight="700" fill="#0b2a4a">Sistema_Oficina_De_Agua</text>
+  <text x="60" y="258" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">CodeIgniter 4 - PHP 8.2</text>
+  <text x="60" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">Bootstrap 5 - Docker</text>
+  <text x="60" y="310" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7b8b">Externo a este repositorio - no se modifica</text>
+
+  <!-- Base de datos -->
+  <rect x="430" y="220" width="280" height="120" rx="8" fill="#ffffff" stroke="#0b2a4a" stroke-width="2"/>
+  <text x="450" y="250" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b08d57">BASE DE DATOS</text>
+  <text x="450" y="276" font-family="Segoe UI, Arial, sans-serif" font-size="18" font-weight="700" fill="#0b2a4a">MariaDB 10.11</text>
+  <text x="450" y="298" font-family="Segoe UI, Arial, sans-serif" font-size="14" fill="#334e68">agua_db</text>
+  <text x="450" y="318" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7b8b">Datos de clientes, contadores, lecturas y pagos</text>
+
+  <!-- Navegador -->
+  <rect x="850" y="90" width="280" height="50" rx="8" fill="#ffffff" stroke="#0b2a4a" stroke-width="2"/>
+  <text x="875" y="120" font-family="Segoe UI, Arial, sans-serif" font-size="14" font-weight="700" fill="#0b2a4a">Navegador del usuario</text>
+
+  <!-- Cloudflare -->
+  <rect x="850" y="165" width="280" height="50" rx="8" fill="#ffffff" stroke="#8a9bb0" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="875" y="195" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">Cloudflare Tunnel (opcional)</text>
+
+  <!-- Frontend -->
+  <rect x="800" y="250" width="370" height="90" rx="8" fill="#ffffff" stroke="#0b2a4a" stroke-width="2"/>
+  <text x="820" y="278" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b08d57">ESTE REPOSITORIO</text>
+  <text x="820" y="302" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#0b2a4a">Frontend Next.js 16</text>
+  <text x="820" y="324" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">Portal institucional - proxy /api/public</text>
+
+  <!-- Backend -->
+  <rect x="800" y="380" width="370" height="150" rx="8" fill="#ffffff" stroke="#0b2a4a" stroke-width="2"/>
+  <text x="820" y="408" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#b08d57">ESTE REPOSITORIO</text>
+  <text x="820" y="432" font-family="Segoe UI, Arial, sans-serif" font-size="17" font-weight="700" fill="#0b2a4a">Backend Spring Boot 3.4</text>
+  <text x="820" y="454" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">API /api/public/consult</text>
+  <text x="820" y="474" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">CAPTCHA en memoria</text>
+  <text x="820" y="494" font-family="Segoe UI, Arial, sans-serif" font-size="13" fill="#334e68">JdbcTemplate de solo lectura</text>
+
+  <!-- Otros modulos -->
+  <rect x="40" y="410" width="310" height="390" rx="8" fill="#f8fafc" stroke="#b7c3d0" stroke-width="2" stroke-dasharray="8 5"/>
+  <text x="60" y="440" font-family="Segoe UI, Arial, sans-serif" font-size="11" font-weight="700" fill="#8a5a1f">CONTEXTO DE FASE 2</text>
+  <text x="60" y="464" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700" fill="#0b2a4a">Otros módulos</text>
+  <text x="60" y="484" font-family="Segoe UI, Arial, sans-serif" font-size="11" fill="#6b7b8b">No incluidos en este repositorio</text>
+
+  <rect x="60" y="505" width="270" height="70" rx="6" fill="#ffffff" stroke="#b7c3d0" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="78" y="530" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334e68">Chatbot con RAG</text>
+  <text x="78" y="550" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">Sin código ni configuración verificable aquí</text>
+
+  <rect x="60" y="590" width="270" height="90" rx="6" fill="#ffffff" stroke="#b7c3d0" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="78" y="615" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334e68">Envío de pagos por colas</text>
+  <text x="78" y="635" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">Broker de mensajes y consumidor</text>
+  <text x="78" y="652" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">Sistema externo de pagos</text>
+  <text x="78" y="669" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">No implementado en esta entrega</text>
+
+  <rect x="60" y="695" width="270" height="80" rx="6" fill="#ffffff" stroke="#b7c3d0" stroke-width="1.5" stroke-dasharray="6 4"/>
+  <text x="78" y="720" font-family="Segoe UI, Arial, sans-serif" font-size="13" font-weight="700" fill="#334e68">Replicación asíncrona</text>
+  <text x="78" y="740" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">SQL hacia NoSQL</text>
+  <text x="78" y="757" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">No implementada en esta entrega</text>
+
+  <!-- Conexiones -->
+  <line x1="990" y1="140" x2="990" y2="165" stroke="#0b2a4a" stroke-width="2" marker-end="url(#flecha)"/>
+  <line x1="990" y1="215" x2="990" y2="250" stroke="#8a9bb0" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#flecha-gris)"/>
+  <line x1="985" y1="340" x2="985" y2="380" stroke="#0b2a4a" stroke-width="2" marker-end="url(#flecha)"/>
+  <polyline points="800,455 760,455 760,340 710,340" fill="none" stroke="#0b2a4a" stroke-width="2" marker-end="url(#flecha)"/>
+  <line x1="350" y1="265" x2="430" y2="265" stroke="#8a9bb0" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#flecha-gris)"/>
+
+  <text x="1005" y="155" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5c6b7a">HTTPS</text>
+  <text x="1005" y="238" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5c6b7a">HTTP interno</text>
+  <text x="1000" y="365" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5c6b7a">HTTP interno</text>
+  <text x="690" y="395" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#0b2a4a">JDBC SELECT</text>
+  <text x="690" y="410" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#0b2a4a">solo lectura</text>
+  <text x="358" y="255" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#5c6b7a">SQL CRUD</text>
+
+  <!-- Nota -->
+  <line x1="40" y1="815" x2="1160" y2="815" stroke="#d4dbe3" stroke-width="1"/>
+  <text x="40" y="836" font-family="Segoe UI, Arial, sans-serif" font-size="10" fill="#6b7b8b">Líneas continuas: componentes y conexiones verificables en este repositorio. Líneas discontinuas: componentes externos o módulos de Fase 2 no incluidos.</text>
+</svg>
